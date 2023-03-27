@@ -1,0 +1,15 @@
+<h1>CONTACT US</h1>
+<p> when clicking on a location it's contact details will apear</p>
+<%= link_to "HOME", root_path  %>
+<h2> Meet our team across the world </h2>
+<form action="/contact" method="get">
+  <label for="wagon"> Enter a location</label> <!-- for matches to the id of the input-->
+  <input type="text" name="wagon" id="wagon" placeholder="Mauritius" value = <%= params[:wagon] %> >
+  <input type="submit">
+</form>
+
+<ol>
+    <% @wagons.each do |wagon| %>
+      <li> <%=wagon%> </li>
+    <%end %>
+</ol>
